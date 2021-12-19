@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--
+ * ER/Studio Data Architect %s XML Schema Generation
+ * Company:		Survey of Pakistan (Ministry of Defense)
+ * Project:		Unified Geo-Database Model for Cadaster Mapping
+ * Author:		The Spatial Coders (SMC-PRIVATE) LIMITED
+ * Version:		1.0
+ * Date Created:	12/13/2021
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:complexType name="Tbl_agriculture_tax">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_agriculture_tax_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Parcel_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Territory_id" type="xs:integer"/>
+      <xs:element name="Area_value" nillable="true" type="xs:decimal"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Irrgation_source_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_type_id" type="xs:integer"/>
+      <xs:element name="Crop_area" nillable="true" type="xs:decimal"/>
+      <xs:element name="Tax_rate" nillable="true" type="xs:decimal"/>
+      <xs:element name="Haboob" nillable="true" type="xs:decimal"/>
+      <xs:element name="Lagaan" nillable="true" type="xs:decimal"/>
+      <xs:element name="Maalia" nillable="true" type="xs:decimal"/>
+      <xs:element name="Tax_period_from" nillable="true" type="xs:date"/>
+      <xs:element name="Tax_period_to" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_area_and_assessment_of_cultivation_in_unsurveyed_land">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_area_and_assessment_of_cultivation_in_unsurveyed_lan_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Occupant_name_with_description" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_name_with_description" nillable="true" type="xs:string"/>
+      <xs:element name="Measurement_date" nillable="true" type="xs:date"/>
+      <xs:element name="Makan_name" nillable="true" type="xs:string"/>
+      <xs:element name="Khasra_no" type="xs:int"/>
+      <xs:element name="Source_of_irrigation" type="xs:int"/>
+      <xs:element name="Soil_classification" type="xs:int"/>
+      <xs:element name="Crops_cultivated" nillable="true" type="xs:string"/>
+      <xs:element name="East_length" nillable="true" type="xs:decimal"/>
+      <xs:element name="West_length" nillable="true" type="xs:decimal"/>
+      <xs:element name="North_length" nillable="true" type="xs:decimal"/>
+      <xs:element name="South_length" nillable="true" type="xs:decimal"/>
+      <xs:element name="Calculation_of_area" nillable="true" type="xs:decimal"/>
+      <xs:element name="Total_area" nillable="true" type="xs:decimal"/>
+      <xs:element name="Assessment_rate_per_acre" nillable="true" type="xs:float"/>
+      <xs:element name="Land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Total_amount" nillable="true" type="xs:float"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Rabi" nillable="true" type="xs:string"/>
+      <xs:element name="Kharif" nillable="true" type="xs:string"/>
+      <xs:element name="Book_no" type="xs:int"/>
+      <xs:element name="Leaf_no" type="xs:int"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_arz_irsal">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_arz_irsal_id_seqregclass" name="Id" type="xs:byte"/>
+      <xs:element name="Local_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Development_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Canal_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Total_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Name_of_lambardar" nillable="true" type="xs:string"/>
+      <xs:element name="Signed_by_patwari" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_season" type="xs:integer"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Signed_date" nillable="true" type="xs:date"/>
+      <xs:element name="Taraf" nillable="true" type="xs:string"/>
+      <xs:element name="Patti" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_balance_sheet_area_and_demand">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_balance_sheet_area_and_demand_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Hadbast_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Ending_year" nillable="true" type="xs:string"/>
+      <xs:element name="Arrears_of_land_year" nillable="true" type="xs:float"/>
+      <xs:element name="Demand_of_current_year" nillable="true" type="xs:float"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivated_rabi" nillable="true" type="xs:float"/>
+      <xs:element name="Cultivated_kharif" nillable="true" type="xs:float"/>
+      <xs:element name="Cultivated_fallow" nillable="true" type="xs:float"/>
+      <xs:element name="Suspended_kharif" nillable="true" type="xs:float"/>
+      <xs:element name="Suspended_rabi" nillable="true" type="xs:float"/>
+      <xs:element name="Unauthorized_kharif" nillable="true" type="xs:float"/>
+      <xs:element name="Unauthorized_rabi" nillable="true" type="xs:float"/>
+      <xs:element name="Kharif_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Kharif_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Kharif_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Kharif_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Kharif_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Kharif_historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Kharif_mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Rabi_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Rabi_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Rabi_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Rabi_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Rabi_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Rabi_hitorical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Rabi_mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Post_demand_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Post_demand_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Post_demand_total" nillable="true" type="xs:float"/>
+      <xs:element name="Total_demand_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Total_demand_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Total_demand_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Total_demand_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Total_demand_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Total_demand_historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Total_demand_of_the_year" nillable="true" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_balance_sheet_collection_and_balance">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_balamce_sheet_collection_and_balance_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Hadbast_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Ending_year" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Collection_kharif_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_kharif_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_kharif_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_kharif_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_kharif_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_kharif_historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_kharif_mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_kharif_total" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Collection_rabi_total" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_kharif_total" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Unauth_balance_rabi_total" nillable="true" type="xs:float"/>
+      <xs:element name="Total_collection_kharif_and_rabi" nillable="true" type="xs:float"/>
+      <xs:element name="Total_unauth_balance_kharif_and_rabi" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_misc_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Over_collection_total" nillable="true" type="xs:float"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_balance_sheet_remission_and_suspension">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_balance_sheet_area_and_demand_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Hadbast_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Ending_year" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Remission_kharif_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_kharif_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_kharif_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_kharif_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_kharif_total" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_rabi_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_rabi_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_rabi_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_rabi_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_rabi_total" nillable="true" type="xs:float"/>
+      <xs:element name="Remission_kharif_and_rabi_total" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_kharif_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_kharif_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_kharif_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_kharif_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_kharif_total" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_rabi_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_rabi_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_rabi_development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_rabi_local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_rabi_total" nillable="true" type="xs:float"/>
+      <xs:element name="Suspension_kharif_and_rabi_total" nillable="true" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_bill_of_assessments">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_bill_of_assessments_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Area_under_assessment" nillable="true" type="xs:float"/>
+      <xs:element name="Land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Development" nillable="true" type="xs:float"/>
+      <xs:element name="Local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Water_rate" nillable="true" type="xs:float"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Dakhil_kharij_no" type="xs:integer"/>
+      <xs:element name="Total_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Grand_total" nillable="true" type="xs:float"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Name_of_lambardar" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_season" type="xs:integer"/>
+      <xs:element name="Crop_year" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Source_of_irrigation" type="xs:byte"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_cast">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_cast_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Cast_name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_crop_inspection">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_crop_inspection_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Cultivator_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_No" type="xs:integer"/>
+      <xs:element name="Area" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Soil_type" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Season_type" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_type" type="xs:integer"/>
+      <xs:element name="Inspection_date" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Leaf_no" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_crop_season">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_crop_season_id_seqregclass" name="Id" type="xs:int"/>
+      <xs:element name="Crop_season" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_crop_types">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Crop_name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_dakhla_payment_receipt">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_dakhla_payment_receipt_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Pament_date" nillable="true" type="xs:date"/>
+      <xs:element name="Lambardar_name" nillable="true" type="xs:string"/>
+      <xs:element name="Crop_year" nillable="true" type="xs:string"/>
+      <xs:element name="Land_revenue" nillable="true" type="xs:string"/>
+      <xs:element name="Local_rate" nillable="true" type="xs:string"/>
+      <xs:element name="Development_fee" nillable="true" type="xs:string"/>
+      <xs:element name="Canal_water_rate" nillable="true" type="xs:string"/>
+      <xs:element name="Mutation_fee" nillable="true" type="xs:string"/>
+      <xs:element name="Total_fee" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_demands_and_recoveries_of_water_course_expenses">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_demands_and_recoveries_of_water_course_expenses_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Name_of_land_owner" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Khasra_no" type="xs:int"/>
+      <xs:element name="Net_area_of_each_khasra" nillable="true" type="xs:float"/>
+      <xs:element name="Rate_to_be_charged_per_acre" nillable="true" type="xs:float"/>
+      <xs:element name="Total_due_amount_from_land_owner" nillable="true" type="xs:float"/>
+      <xs:element name="Amount_due_to_land_owner_for_land_taken_up_for_each_kahsra" nillable="true" type="xs:float"/>
+      <xs:element name="Amount_due_to_land_owner_on_account_of_doing_work_himself" nillable="true" type="xs:float"/>
+      <xs:element name="Total_amount_due_to_land_owner" nillable="true" type="xs:float"/>
+      <xs:element name="Balance_due_to_land_owner" nillable="true" type="xs:float"/>
+      <xs:element name="Balanced_recovered_from_land_owner_per_entire_khewat" nillable="true" type="xs:float"/>
+      <xs:element name="Balanced_recovered_from_land_owner_per_each_acre_of_khewat" nillable="true" type="xs:float"/>
+      <xs:element name="Balanced_recovered_from_land_owner_per_each_khasra_no" nillable="true" type="xs:float"/>
+      <xs:element name="Annual_installment_recoverable_on_each_khasra" nillable="true" type="xs:float"/>
+      <xs:element name="Recoveries_date" nillable="true" type="xs:date"/>
+      <xs:element name="Recoveries_amount" nillable="true" type="xs:float"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_dhal_bachh_malia_ghair_mustaqil">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_dhal_bachh_malia_ghair_mustaqil_id_seqregclass" name="Id" type="xs:int"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_father_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Malik_khewat_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Area_under_assessment" nillable="true" type="xs:decimal"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Source_of_irrigation" type="xs:integer"/>
+      <xs:element name="Well_name" nillable="true" type="xs:string"/>
+      <xs:element name="Land_revenue" nillable="true" type="xs:decimal"/>
+      <xs:element name="Development_fee" nillable="true" type="xs:decimal"/>
+      <xs:element name="Local_rate" nillable="true" type="xs:decimal"/>
+      <xs:element name="Lambardari_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Total" nillable="true" type="xs:float"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Dakhil_kharij_no" type="xs:integer"/>
+      <xs:element name="Total_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Grand_total" nillable="true" type="xs:float"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_season" type="xs:integer"/>
+      <xs:element name="Season_year" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Name_of_lambardar" nillable="true" type="xs:string"/>
+      <xs:element name="Taraf" nillable="true" type="xs:string"/>
+      <xs:element name="Patti" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_dhal_bachh_malia_mustaqil">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_dhal_bachh_malia_mustaqil_id_seqregclass" name="Id" type="xs:int"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_father_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Kharij_no_khewat_malik" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_season" type="xs:integer"/>
+      <xs:element name="Crop_season_land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Crop_season_development_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Crop_season_local_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Crop_season_lambardari_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Lambardari_fee_on_water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Total_amount" nillable="true" type="xs:float"/>
+      <xs:element name="Dakhil_kharij_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Total_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Grand_total" nillable="true" type="xs:float"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Name_of_lambardar" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Crop_year" nillable="true" type="xs:string"/>
+      <xs:element name="Patti" nillable="true" type="xs:string"/>
+      <xs:element name="Taraf" nillable="true" type="xs:string"/>
+      <xs:element name="Land_revenue" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_district">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_district_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="District_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Division_id" type="xs:integer"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_division">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_division_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Division_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Province_id" type="xs:integer"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_family">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_family_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Family_name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_fard_asiab">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Source_of_water" type="xs:integer"/>
+      <xs:element name="Operationa_date" nillable="true" type="xs:date"/>
+      <xs:element name="Operational_expenses" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_of_water" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_of_water_mill" nillable="true" type="xs:string"/>
+      <xs:element name="Name_of_asiaban" nillable="true" type="xs:string"/>
+      <xs:element name="Grindind_day_night" nillable="true" type="xs:string"/>
+      <xs:element name="Income_share_water_owner" nillable="true" type="xs:string"/>
+      <xs:element name="Income_share_watermill_owner" nillable="true" type="xs:string"/>
+      <xs:element name="Income_share_asiaban" nillable="true" type="xs:string"/>
+      <xs:element name="Close_days_per_year" nillable="true" type="xs:byte"/>
+      <xs:element name="Government_demand" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Year" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_fard_badar">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:integer"/>
+      <xs:element name="Serial_no" nillable="true" type="xs:string"/>
+      <xs:element name="Khewat_no_previous" nillable="true" type="xs:string"/>
+      <xs:element name="Khewat_no_new" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_report" nillable="true" type="xs:string"/>
+      <xs:element name="Field_kanungo_report" nillable="true" type="xs:string"/>
+      <xs:element name="Revenue_officer_order" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Correction_date" nillable="true" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_fard_taqseem_ab">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Source_of_lrrigation" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Share" nillable="true" type="xs:string"/>
+      <xs:element name="Serial_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Year" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_field_book">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:integer"/>
+      <xs:element name="Khasra_no_former" type="xs:string"/>
+      <xs:element name="Khasra_no_present" type="xs:string"/>
+      <xs:element name="Length_east" nillable="true" type="xs:string"/>
+      <xs:element name="Length_west" nillable="true" type="xs:string"/>
+      <xs:element name="Length_south" nillable="true" type="xs:string"/>
+      <xs:element name="Length_north" nillable="true" type="xs:string"/>
+      <xs:element name="Calculation_of_area" nillable="true" type="xs:string"/>
+      <xs:element name="Area_and_soil_classification" nillable="true" type="xs:string"/>
+      <xs:element name="Signature_of_kanungo" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="Khatuni_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Entry_date" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_final_attestation_certificate_ror">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_final_attestation_certificate_id_seqregclass" name="Id" type="xs:byte"/>
+      <xs:element name="Attestation_date" nillable="true" type="xs:date"/>
+      <xs:element name="Attestation_place" nillable="true" type="xs:string"/>
+      <xs:element name="Attested_khewat" nillable="true" type="xs:string"/>
+      <xs:element name="Verification_of_mutation_orders" nillable="true" type="xs:string"/>
+      <xs:element name="Khewat_checked_with_previous_register" nillable="true" type="xs:string"/>
+      <xs:element name="Kehewat_compared_with_patwari_current_copy" nillable="true" type="xs:string"/>
+      <xs:element name="Office_khasra_nos_of_supplementary_maps_checked" nillable="true" type="xs:string"/>
+      <xs:element name="Mutation_entered_not_attested_june" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Office_khasra_nos_of_supplementary_maps_checked_wrt_tehsil_copy" nillable="true" type="xs:string"/>
+      <xs:element name="Book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Leaf_no" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Signed_revenue_officer" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_forest">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_forest_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Parcel_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Territory_id" type="xs:integer"/>
+      <xs:element name="Forest_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Forest_type_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Forest_category_id" type="xs:integer"/>
+      <xs:element name="Compartment_name" nillable="true" type="xs:string"/>
+      <xs:element name="Sub_comparment" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Forest_zone_id" type="xs:integer"/>
+      <xs:element name="Working_circle" nillable="true" type="xs:string"/>
+      <xs:element name="Working_pan" nillable="true" type="xs:string"/>
+      <xs:element name="Notification" nillable="true" type="xs:string"/>
+      <xs:element name="Source_document" nillable="true" type="xs:string"/>
+      <xs:element name="Source_image" nillable="true" type="xs:string"/>
+      <xs:element name="Source_map" nillable="true" type="xs:string"/>
+      <xs:element name="From_date" nillable="true" type="xs:date"/>
+      <xs:element name="To_date" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_forest_category">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_forest_category_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Forest_category" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_forest_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_forest_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Forest_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_forest_zone">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_forest_zone_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Forest_zone" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_gcps">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_gcps_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Gcp_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Gcp_type_id" type="xs:integer"/>
+      <xs:element name="Elevation" nillable="true" type="xs:decimal"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_gcps_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_gcps_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Gcp_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_gender">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_gender_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Gender" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_haqdaran_e_zamin">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_record_of_rights_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_no" type="xs:integer"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Owner_cast_id" type="xs:integer"/>
+      <xs:element name="Owner_address" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_cnic_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Ownership_type_id" type="xs:integer"/>
+      <xs:element name="Share_in_joint_khewat" nillable="true" type="xs:string"/>
+      <xs:element name="Share_area" nillable="true" type="xs:string"/>
+      <xs:element name="Agri_pass_book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_name" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_father_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Cultivator_cast_id" type="xs:integer"/>
+      <xs:element name="Cultivator_cnic_no" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_address" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Malik_area_khasra_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Irrigation_source_id" type="xs:integer"/>
+      <xs:element name="Rent_paid_by_cultivator" nillable="true" type="xs:string"/>
+      <xs:element name="Rent_rate" nillable="true" type="xs:string"/>
+      <xs:element name="Rent_demand" nillable="true" type="xs:string"/>
+      <xs:element name="Detail_revenue_ceasses" nillable="true" type="xs:string"/>
+      <xs:element name="Remakrs" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Processing_date" nillable="true" type="xs:date"/>
+      <xs:element name="Taraf" nillable="true" type="xs:string"/>
+      <xs:element name="Patti" nillable="true" type="xs:string"/>
+      <xs:element name="Book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Leaf_no" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_haqdaran_nakhlistan">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:integer"/>
+      <xs:element name="Khewat_no" type="xs:string"/>
+      <xs:element name="Khatuni_no" type="xs:string"/>
+      <xs:element name="Land_owner" nillable="true" type="xs:string"/>
+      <xs:element name="Khasra_no_present" type="xs:string"/>
+      <xs:element name="Source_of_irrigation" type="xs:string"/>
+      <xs:element name="Date_trees_female" nillable="true" type="xs:string"/>
+      <xs:element name="Date_trees_eunuch" nillable="true" type="xs:string"/>
+      <xs:element name="Date_trees_male" nillable="true" type="xs:string"/>
+      <xs:element name="Date_trees_total" nillable="true" type="xs:string"/>
+      <xs:element name="Govt_demand_revenue" nillable="true" type="xs:string"/>
+      <xs:element name="Govt_demand_cesses" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Inspection_date" nillable="true" type="xs:date"/>
+      <xs:element name="Land_owner_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Trees_owner" nillable="true" type="xs:string"/>
+      <xs:element name="Trees_owner_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Land_area" nillable="true" type="xs:float"/>
+      <xs:element name="Book_no" type="xs:int"/>
+      <xs:element name="Leaf_no" type="xs:int"/>
+      <xs:element name="Survey_year" nillable="true" type="xs:string"/>
+      <xs:element name="Khasra_no_former" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_holding_slip">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_holding_slip_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no_in_last_ror_register" type="xs:integer"/>
+      <xs:element name="New_khatuni_no" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_cnic" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_address" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Owner_cast" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Ownership_type" type="xs:integer"/>
+      <xs:element name="Specific_share_in_joint_khewat" nillable="true" type="xs:string"/>
+      <xs:element name="Agriculture_pass_book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_name" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_cnic" nillable="true" type="xs:string"/>
+      <xs:element name="Cultivator_address" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Cultivator_cast" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Area_of_khasra" nillable="true" type="xs:float"/>
+      <xs:element name="Soil_classification" nillable="true" type="xs:string"/>
+      <xs:element name="Total_khatuni_owners" type="xs:int"/>
+      <xs:element name="Total_khewat_owners" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Source_of_irrigation" type="xs:integer"/>
+      <xs:element name="Source_name" nillable="true" type="xs:string"/>
+      <xs:element name="Rent_paid_by_cultivator" type="xs:int"/>
+      <xs:element name="Details_of_revenue" nillable="true" type="xs:string"/>
+      <xs:element name="Details_of_ceases" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+      <xs:element name="Taraf" nillable="true" type="xs:string"/>
+      <xs:element name="Patti" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_index_khasra_no">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:integer"/>
+      <xs:element name="Khasra_no" type="xs:string"/>
+      <xs:element name="Khatuni_no" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_interrogatory_band_sawal">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_interrogatory_band_swal_id_seqregclass" name="Id" type="xs:int"/>
+      <xs:element name="Interrogatory_on_the_name" nillable="true" type="xs:string"/>
+      <xs:element name="Father_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Cast" type="xs:byte"/>
+      <xs:element name="Village_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mutation_no" type="xs:integer"/>
+      <xs:element name="Transferred_to" nillable="true" type="xs:string"/>
+      <xs:element name="Area_transferred" nillable="true" type="xs:float"/>
+      <xs:element name="Nature_of_transfer" nillable="true" type="xs:string"/>
+      <xs:element name="Date_of_transfer" nillable="true" type="xs:date"/>
+      <xs:element name="Consideration_amount" nillable="true" type="xs:float"/>
+      <xs:element name="Questions" nillable="true" type="xs:string"/>
+      <xs:element name="Attested_by_patwari" nillable="true" type="xs:string"/>
+      <xs:element name="Attested_by_kanungo" nillable="true" type="xs:string"/>
+      <xs:element name="Answers" nillable="true" type="xs:string"/>
+      <xs:element name="Interrogatory_thumb_expression" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="Identifying_person_thumb_expression" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="Place_of_statement_recording" nillable="true" type="xs:string"/>
+      <xs:element name="Signature_of_officer_statement_recording" nillable="true" type="xs:string"/>
+      <xs:element name="Date_of_statement_recording" nillable="true" type="xs:date"/>
+      <xs:element name="Order_to_interrogatory" nillable="true" type="xs:string"/>
+      <xs:element name="Reports_of_interrogatory" nillable="true" type="xs:string"/>
+      <xs:element name="Orders_of_interrogatory" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_intiqal_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_inteqal_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Inteqal_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_kharaba_statement">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Cultivated_area" nillable="true" type="xs:decimal"/>
+      <xs:element name="Matured_area" nillable="true" type="xs:decimal"/>
+      <xs:element name="Failed_area" nillable="true" type="xs:decimal"/>
+      <xs:element name="Attested_by_qanungo" nillable="true" type="xs:string"/>
+      <xs:element name="Attested_by_teshildar" nillable="true" type="xs:string"/>
+      <xs:element name="Attested_by_assistant_collector" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_season" type="xs:integer"/>
+      <xs:element name="Season_year" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_khasra_numbers">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_khasra_numbers_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Khasra_no" type="xs:string"/>
+      <xs:element name="Khatuni_no" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_khatuni">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Khatuni_id" nillable="true" type="xs:string"/>
+      <xs:element name="Person_name" nillable="true" type="xs:string"/>
+      <xs:element name="Person_cnic" nillable="true" type="xs:string"/>
+      <xs:element name="Father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Address" nillable="true" type="xs:string"/>
+      <xs:element name="Cast" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_khewat">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Khewat_no" type="xs:string"/>
+      <xs:element name="Person_name" nillable="true" type="xs:string"/>
+      <xs:element name="Father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Cast" type="xs:string"/>
+      <xs:element name="Adrees" nillable="true" type="xs:string"/>
+      <xs:element name="Cnic" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_land_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_land_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Land_type" nillable="true" type="xs:string"/>
+      <xs:element name="Description" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_landuse_subtype">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_landuse_subtype_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Sub_type" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Type_id" nillable="true" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_landuse_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_landuse_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Landuse_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_ledger_of_demand_collection">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_ledger_of_demand_collection_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Name_of_land_owner" nillable="true" type="xs:string"/>
+      <xs:element name="Father_name_of_land_owner" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Hadbast_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="On_what_account" nillable="true" type="xs:string"/>
+      <xs:element name="Land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Liable_to_local_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Free_of_cesses" nillable="true" type="xs:string"/>
+      <xs:element name="Water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Total" nillable="true" type="xs:float"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Date_of_recovery" nillable="true" type="xs:date"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Day_book_id" type="xs:integer"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_list_of_khatuni_totals">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_list_of_khatuni_totals_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_no" type="xs:integer"/>
+      <xs:element name="Khasra_count" type="xs:int"/>
+      <xs:element name="Area_chahi" nillable="true" type="xs:float"/>
+      <xs:element name="Area_nulchahi" nillable="true" type="xs:float"/>
+      <xs:element name="Area_nahri" nillable="true" type="xs:float"/>
+      <xs:element name="Area_barani" nillable="true" type="xs:float"/>
+      <xs:element name="Area_banjar_qadeem" nillable="true" type="xs:float"/>
+      <xs:element name="Area_banjar_jadeed" nillable="true" type="xs:float"/>
+      <xs:element name="Area_ghair_mumkin" nillable="true" type="xs:float"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Grand_total" nillable="true" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_list_of_rents">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_rents_list_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Tenant_name" nillable="true" type="xs:string"/>
+      <xs:element name="Area_of_land" nillable="true" type="xs:float"/>
+      <xs:element name="Soil_details" nillable="true" type="xs:string"/>
+      <xs:element name="Rent_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Rent_amount" nillable="true" type="xs:float"/>
+      <xs:element name="Rent_fixing_date" nillable="true" type="xs:date"/>
+      <xs:element name="Crops_grown" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_mauza">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_mauza_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Mauza_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Tehsil_id" type="xs:integer"/>
+      <xs:element name="Qanoongo_halqa_id" type="xs:int"/>
+      <xs:element name="Patwar_circle_id" type="xs:int"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_mauza_soil_kind_changes">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_mauza_soil_kind_changes_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Old_area_chahi" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_nahri" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_nulchahi" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_barani" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_total_cultivated" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_banjar_qadeem" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_banjar_jadeed" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_khair_mumkin" nillable="true" type="xs:float"/>
+      <xs:element name="Old_area_total_uncultivated" nillable="true" type="xs:float"/>
+      <xs:element name="Old_ror_register_year" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_chahi" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_nahri" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_nulchahi" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_barani" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_total_cultivated" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_najar_qadeem" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_banjar_jadeed" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_ghair_mumkin" nillable="true" type="xs:float"/>
+      <xs:element name="New_area_total_uncultivated" nillable="true" type="xs:float"/>
+      <xs:element name="New_ror_register_year" nillable="true" type="xs:float"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Signed_patwari" nillable="true" type="xs:string"/>
+      <xs:element name="Signed_qanoongo" nillable="true" type="xs:string"/>
+      <xs:element name="Signed_revenue_officer" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_measurement_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_measurement_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Measurement_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_measurement_units">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_measurement_units_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Measurement_unit" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Measurment_type_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_memorandum_transfer_of_rights">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_memorandum_transfer_of_rights_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Mutation_no" type="xs:int"/>
+      <xs:element name="Nature_of_mutation" nillable="true" type="xs:string"/>
+      <xs:element name="Sale_mortgage_price" nillable="true" type="xs:decimal"/>
+      <xs:element name="Decision_date" nillable="true" type="xs:date"/>
+      <xs:element name="Transferor_name" nillable="true" type="xs:string"/>
+      <xs:element name="Transferor_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Transferee_name" nillable="true" type="xs:string"/>
+      <xs:element name="Transferee_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Trasferred_khasra_no" nillable="true" type="xs:string"/>
+      <xs:element name="Share_of_khata" nillable="true" type="xs:string"/>
+      <xs:element name="Area_transferred" nillable="true" type="xs:string"/>
+      <xs:element name="Revenue_officer_order_copy" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_miscellaneous_land_revenue">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_miscellaneous_land_revenue_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="No_of_cases_reported" type="xs:int"/>
+      <xs:element name="Person_name_liable_for_payment" nillable="true" type="xs:string"/>
+      <xs:element name="Person_father_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Trees" nillable="true" type="xs:string"/>
+      <xs:element name="Miscellaneous_products" nillable="true" type="xs:string"/>
+      <xs:element name="Land_revenue_written_off" nillable="true" type="xs:string"/>
+      <xs:element name="Total_revenue" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_mortgages_list_with_possession">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_mortgages_list_with_possession_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_no" type="xs:integer"/>
+      <xs:element name="Mortgagor_name" nillable="true" type="xs:string"/>
+      <xs:element name="Mortgagor_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Mortgage_name" nillable="true" type="xs:string"/>
+      <xs:element name="Mortgage_description" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Area_of_mortgage" nillable="true" type="xs:float"/>
+      <xs:element name="Soil_classification" nillable="true" type="xs:string"/>
+      <xs:element name="Amount_of_mortgage_debt" nillable="true" type="xs:float"/>
+      <xs:element name="Date_of_mortgage" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_mutations">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_mutation_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Last_khewat" type="xs:integer"/>
+      <xs:element name="Last_khatuni" type="xs:integer"/>
+      <xs:element name="Last_owner" nillable="true" type="xs:string"/>
+      <xs:element name="Last_owner_father_husband" nillable="true" type="xs:string"/>
+      <xs:element name="Last_owner_address" nillable="true" type="xs:string"/>
+      <xs:element name="Last_owner_cnic" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Last_owner_cast" type="xs:integer"/>
+      <xs:element name="Last_mortgagee" nillable="true" type="xs:string"/>
+      <xs:element name="Last_ownership_status" nillable="true" type="xs:string"/>
+      <xs:element name="Last_cultivator_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Last_cultivator_cast" type="xs:integer"/>
+      <xs:element name="Last_cultivator_address" nillable="true" type="xs:string"/>
+      <xs:element name="Last_cultivator_cnic" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Last_khasra_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Last_soil_type" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="New_khewat" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="New_khatuni" type="xs:integer"/>
+      <xs:element name="Last_share_in_joint_khewat" nillable="true" type="xs:string"/>
+      <xs:element name="Last_area_according_to_share" nillable="true" type="xs:string"/>
+      <xs:element name="Last_cultivator_father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element name="New_owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="New_owner_father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element name="Mutation_id" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="New_owner_cast" type="xs:integer"/>
+      <xs:element name="New_owner_address" nillable="true" type="xs:string"/>
+      <xs:element name="New_owner_cnic" nillable="true" type="xs:string"/>
+      <xs:element name="New_ownership_status" nillable="true" type="xs:string"/>
+      <xs:element name="New_share_in_joint_khewat" nillable="true" type="xs:string"/>
+      <xs:element name="New_area_according_to_share" nillable="true" type="xs:string"/>
+      <xs:element name="New_cultivator_name" nillable="true" type="xs:string"/>
+      <xs:element name="New_cultivator_father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element name="New_cultivator_address" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="New_cultivator_cast" type="xs:integer"/>
+      <xs:element name="New_cultivator_cnic" nillable="true" type="xs:string"/>
+      <xs:element name="New_khasra_no" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="New_soil_type" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Hadbast_no" type="xs:int"/>
+      <xs:element name="Dakhil_kharij_no" type="xs:int"/>
+      <xs:element name="Nature_of_dakhil_kharij" nillable="true" type="xs:string"/>
+      <xs:element name="Price_of_sale" nillable="true" type="xs:string"/>
+      <xs:element name="Amount_of_mortgage" nillable="true" type="xs:string"/>
+      <xs:element name="Dakhil_kharij_fee" nillable="true" type="xs:string"/>
+      <xs:element name="Dakhil_kharij_fee_chalan_no" type="xs:int"/>
+      <xs:element name="Dakhil_kharij_chalan_no" type="xs:int"/>
+      <xs:element name="Thumb_expression_of_old_party" nillable="true" type="xs:string"/>
+      <xs:element name="Thumb_expression_of_new_party" nillable="true" type="xs:string"/>
+      <xs:element name="Witness_of_old_party" nillable="true" type="xs:string"/>
+      <xs:element name="Witness_of_new_party" nillable="true" type="xs:string"/>
+      <xs:element name="Cnic_of_old_party" nillable="true" type="xs:string"/>
+      <xs:element name="Cnic_of_new_party" nillable="true" type="xs:string"/>
+      <xs:element name="Order_of_revenue_officer" nillable="true" type="xs:string"/>
+      <xs:element name="Attachments" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_naqsha_haquq_chahat_wa_nul_chahat">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khatuni_no" type="xs:integer"/>
+      <xs:element name="Name_of_well" nillable="true" type="xs:string"/>
+      <xs:element name="Wells_depth_to_water" nillable="true" type="xs:string"/>
+      <xs:element name="Depth_on_water" nillable="true" type="xs:string"/>
+      <xs:element name="Well_condition" nillable="true" type="xs:string"/>
+      <xs:element name="Length_of_tube" nillable="true" type="xs:string"/>
+      <xs:element name="Length_of_filter" nillable="true" type="xs:string"/>
+      <xs:element name="Depth_of_water" nillable="true" type="xs:string"/>
+      <xs:element name="Mouth_of_tube" nillable="true" type="xs:string"/>
+      <xs:element name="Working_oil_electricity" nillable="true" type="xs:string"/>
+      <xs:element name="Working_condition" nillable="true" type="xs:string"/>
+      <xs:element name="Usage_start_on" nillable="true" type="xs:date"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_share" nillable="true" type="xs:string"/>
+      <xs:element name="User_name" nillable="true" type="xs:string"/>
+      <xs:element name="User_share" nillable="true" type="xs:string"/>
+      <xs:element name="Horse_power" nillable="true" type="xs:float"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Year" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_naqsha_huquq_panchakiat">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Serial_no" type="xs:int"/>
+      <xs:element name="Khasra_no" type="xs:int"/>
+      <xs:element name="Khatuni_no" type="xs:int"/>
+      <xs:element name="Name_of_karez" nillable="true" type="xs:string"/>
+      <xs:element name="Operational_year" type="xs:int"/>
+      <xs:element name="Operational_expesnses" nillable="true" type="xs:float"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Asiaban_name" nillable="true" type="xs:string"/>
+      <xs:element name="Asiaban_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Grinding_per_day" nillable="true" type="xs:string"/>
+      <xs:element name="Water_share_of_owner_per_day" nillable="true" type="xs:float"/>
+      <xs:element name="Watermil_share_of_owner_per_day" nillable="true" type="xs:float"/>
+      <xs:element name="Share_of_asaiban_per_day" nillable="true" type="xs:float"/>
+      <xs:element name="Yearly_closing_days" nillable="true" type="xs:byte"/>
+      <xs:element name="Govt_demand" nillable="true" type="xs:string"/>
+      <xs:element name="Accessment_year" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_ownership_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_ownership_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Ownership_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_parcel_landuse">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_parcel_landuse_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Parcel_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Territory_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Landuse_type_id" nillable="true" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Landuse_subtype_id" nillable="true" type="xs:integer"/>
+      <xs:element name="Effective_from" nillable="true" type="xs:date"/>
+      <xs:element name="Effective_to" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_parcels">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_parcels_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Parcel_id" type="xs:string"/>
+      <xs:element name="Territory_id" type="xs:string"/>
+      <xs:element name="Khasra_id" type="xs:string"/>
+      <xs:element name="Sub_khasra_id" nillable="true" type="xs:string"/>
+      <xs:element name="Square_no" nillable="true" type="xs:string"/>
+      <xs:element name="Masavi_no" nillable="true" type="xs:string"/>
+      <xs:element name="Dimensions" nillable="true" type="xs:string"/>
+      <xs:element name="Feet_per_marla" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Mauza_id" nillable="true" type="xs:integer"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Landusetype_id" type="xs:int"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_parcels_info">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_parcels_info_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Parcel_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Territory_id" type="xs:integer"/>
+      <xs:element name="Floor_no" nillable="true" type="xs:string"/>
+      <xs:element name="House_no" nillable="true" type="xs:string"/>
+      <xs:element name="Flat_no" nillable="true" type="xs:string"/>
+      <xs:element name="Shop_no" nillable="true" type="xs:string"/>
+      <xs:element name="Office_no" nillable="true" type="xs:string"/>
+      <xs:element name="Property_no" nillable="true" type="xs:string"/>
+      <xs:element name="Property_name" nillable="true" type="xs:string"/>
+      <xs:element name="Street_no" nillable="true" type="xs:string"/>
+      <xs:element name="Sector" nillable="true" type="xs:string"/>
+      <xs:element name="Sub_sector" nillable="true" type="xs:string"/>
+      <xs:element name="Housing_society" nillable="true" type="xs:string"/>
+      <xs:element name="Block" nillable="true" type="xs:string"/>
+      <xs:element name="Zone" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_patwar_circle">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_patwar_circle_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Patwar_circle_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Qanoongo_halqa_id" type="xs:integer"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_patwar_circles_list">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_patwar_circles_list_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Name_of_field_qanungo_circle" nillable="true" type="xs:string"/>
+      <xs:element name="Patwar_circle_no" type="xs:int"/>
+      <xs:element name="Patwar_circle_name" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_name" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_father_name" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_cast" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_native_village" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_date_of_birth" nillable="true" type="xs:date"/>
+      <xs:element name="Patwari_date_of_joining" nillable="true" type="xs:date"/>
+      <xs:element name="Estate_name" nillable="true" type="xs:string"/>
+      <xs:element name="Estate_total_area" nillable="true" type="xs:float"/>
+      <xs:element name="Estate_cultivated_area" nillable="true" type="xs:float"/>
+      <xs:element name="Estate_land_revenue_assessment" nillable="true" type="xs:float"/>
+      <xs:element name="No_of_khasra_entries" type="xs:int"/>
+      <xs:element name="No_of_kharuni_entries" type="xs:int"/>
+      <xs:element name="No_of_khewat_entries" type="xs:int"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Qanungo_halqa_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Tehsil_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_patwari_day_book">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_patwari_day_book_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Entry_date" nillable="true" type="xs:date"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element name="Owner_name_with_description" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_season" type="xs:integer"/>
+      <xs:element name="Crop_season_year" nillable="true" type="xs:string"/>
+      <xs:element name="Land_revenue" nillable="true" type="xs:float"/>
+      <xs:element name="Liable_to_local_cesses" nillable="true" type="xs:float"/>
+      <xs:element name="Free_of_cesses" nillable="true" type="xs:float"/>
+      <xs:element name="Water_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Development_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Local_rate" nillable="true" type="xs:float"/>
+      <xs:element name="Historical_mosque_fund_cess" nillable="true" type="xs:float"/>
+      <xs:element name="Mutation_fee" nillable="true" type="xs:float"/>
+      <xs:element name="Total" nillable="true" type="xs:float"/>
+      <xs:element name="Patwari_receipt_no" type="xs:int"/>
+      <xs:element name="Dakhla_no" type="xs:int"/>
+      <xs:element name="Date_of_receipt" nillable="true" type="xs:date"/>
+      <xs:element name="Signed_by_patwari" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Hadbast_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_pending_muations">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_pending_muations_id_seqregclass" name="Id" type="xs:byte"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mutation_no" type="xs:integer"/>
+      <xs:element name="Entry_date" nillable="true" type="xs:date"/>
+      <xs:element name="Nature_of_mutation" nillable="true" type="xs:string"/>
+      <xs:element name="Reasons_of_non_attestation" nillable="true" type="xs:string"/>
+      <xs:element name="Disposal_measures" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Revenue_officer_circle" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_possession">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_possession_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Parcel_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Territory_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Possession_type_id" nillable="true" type="xs:integer"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_possession_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_possession_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Possession_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_profession">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_profession_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Profession" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_province">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_province_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Province_name" nillable="true" type="xs:string"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_qanoongo_halqa">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_qanoongo_halqa_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Qanoongo_halqa_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Tehsil_id" type="xs:integer"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_radeefwar_malikan">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:integer"/>
+      <xs:element name="Alphabatical_letters" nillable="true" type="xs:string"/>
+      <xs:element name="Owner_name" nillable="true" type="xs:string"/>
+      <xs:element name="Father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element name="Khewat_no" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Ownership_rights" nillable="true" type="xs:string"/>
+      <xs:element name="Mortgagee_rights" nillable="true" type="xs:string"/>
+      <xs:element name="Other_rights" nillable="true" type="xs:string"/>
+      <xs:element name="Book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Leaf_no" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_radeefwar_murtahinan">
+    <xs:sequence>
+      <xs:element name="Alphabetical_letters" nillable="true" type="xs:string"/>
+      <xs:element name="Mortgagee_name" nillable="true" type="xs:string"/>
+      <xs:element name="Father_husband_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khewat_no" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Leaf_no" nillable="true" type="xs:string"/>
+      <xs:element default="nextvaltbl_radeefwar_murtahinan_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Ownership_rights" nillable="true" type="xs:string"/>
+      <xs:element name="Mortgagee_rights" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_record_in_patwari_custody">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_record_in_patwari_custody_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Patwar_circle" type="xs:integer"/>
+      <xs:element name="Record_preparation_year" nillable="true" type="xs:string"/>
+      <xs:element name="Record_description" nillable="true" type="xs:string"/>
+      <xs:element name="Date_of_destruction_filing_in_the_tehsil_office" nillable="true" type="xs:date"/>
+      <xs:element name="Qanungo_signature" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_signature_responsible_for" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_record_of_rights">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Territory_id" type="xs:integer"/>
+      <xs:element name="Person_id" nillable="true" type="xs:string"/>
+      <xs:element name="Floor_no" nillable="true" type="xs:string"/>
+      <xs:element name="Organization" nillable="true" type="xs:string"/>
+      <xs:element name="Previous_owner_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Intiqal_type" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Ownership_type" type="xs:integer"/>
+      <xs:element name="Sharing_percentage" nillable="true" type="xs:decimal"/>
+      <xs:element name="Ownership_start_date" nillable="true" type="xs:date"/>
+      <xs:element name="Ownership_end_date" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element default="nextvaltbl_record_of_rights_id_seq1regclass" name="Id" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_religion">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_religion_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Religion" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_revenue_terminology">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_revenue_terminology_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Terminology" nillable="true" type="xs:string"/>
+      <xs:element name="Description" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_robkar_ibtdai">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Preliminary_proceeding_mauza" nillable="true" type="xs:string"/>
+      <xs:element name="Shajrah_nasab" nillable="true" type="xs:string"/>
+      <xs:element name="Index_survey" type="xs:int"/>
+      <xs:element name="Index_of_owners" nillable="true" type="xs:string"/>
+      <xs:element name="Index_of_mortgagees" nillable="true" type="xs:string"/>
+      <xs:element name="Register_haqdaran_zamin" nillable="true" type="xs:string"/>
+      <xs:element name="Note_of_changes_of_soil_type" nillable="true" type="xs:string"/>
+      <xs:element name="Register_haqdaran_nakhlistan" nillable="true" type="xs:string"/>
+      <xs:element name="Statement_of_customs" nillable="true" type="xs:string"/>
+      <xs:element name="Orders_of_assessments" nillable="true" type="xs:string"/>
+      <xs:element name="Orders_of_assessments_over_holdings" nillable="true" type="xs:string"/>
+      <xs:element name="Sheets_of_accepted_mutations" nillable="true" type="xs:string"/>
+      <xs:element name="Field_book" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Commencement_date" nillable="true" type="xs:date"/>
+      <xs:element name="Completion_date" nillable="true" type="xs:date"/>
+      <xs:element name="Signed_district_collector" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_roznamcha_karguzari_patwari">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Karquzari_date" nillable="true" type="xs:date"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Work_name" nillable="true" type="xs:string"/>
+      <xs:element name="Area_name" nillable="true" type="xs:string"/>
+      <xs:element name="No_of_fields" nillable="true" type="xs:string"/>
+      <xs:element name="No_of_khatunis" nillable="true" type="xs:string"/>
+      <xs:element name="No_of_squares" nillable="true" type="xs:string"/>
+      <xs:element name="No_of_mutations" nillable="true" type="xs:string"/>
+      <xs:element name="Previous_day_work_index" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_roznamcha_karguzari_qanoongo">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Karguzari_date" nillable="true" type="xs:date"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Previous_visit_date" nillable="true" type="xs:date"/>
+      <xs:element name="Abstract_of_work" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Work_in_hand" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_roznamcha_karguzari_thesildar">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Karguzari_date" nillable="true" type="xs:date"/>
+      <xs:element name="Work_details" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Tehsil_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_roznamcha_waqiati_patwari">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Roznamcha_date" nillable="true" type="xs:date"/>
+      <xs:element name="Heading_of_entry" nillable="true" type="xs:string"/>
+      <xs:element name="Occurance" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_sect">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_sect_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Sect" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_shajrah_nasab">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_shajrah_nasab_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Person_id" type="xs:int"/>
+      <xs:element name="Person_name" nillable="true" type="xs:string"/>
+      <xs:element name="Person_cnic" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Gender_id" type="xs:integer"/>
+      <xs:element name="Father_husband_name" type="xs:int"/>
+      <xs:element name="Mother_name" type="xs:int"/>
+      <xs:element name="Finger_impression" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="Alive" nillable="true" type="xs:string"/>
+      <xs:element name="Contact_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Family_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Sub_cast_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Cast_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Sect_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Religion_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Profession_id" type="xs:integer"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_soil_type">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int"/>
+      <xs:element name="Soil_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_source_of_irrigation">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_source_of_irrigation_id_seqregclass" name="Id" type="xs:int"/>
+      <xs:element name="Source_of_irrigation" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_sub_cast">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_sub_cast_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Sub_cast" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_survey_boundary_marks_condition">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_survey_boundary_marks_condition_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Estate_name" nillable="true" type="xs:string"/>
+      <xs:element name="Pillar_no" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_no" type="xs:integer"/>
+      <xs:element name="Pillar_condition" nillable="true" type="xs:string"/>
+      <xs:element name="Action_needed" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks_by_qanungo" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks_by_others" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_survey_equipment_almirah">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_patwari_survey_equipment_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Article" nillable="true" type="xs:string"/>
+      <xs:element name="Supply_date" nillable="true" type="xs:date"/>
+      <xs:element name="Condition" nillable="true" type="xs:string"/>
+      <xs:element name="Condition_year" nillable="true" type="xs:string"/>
+      <xs:element name="Signature_of_patwari_responsible_for" nillable="true" type="xs:string"/>
+      <xs:element name="Removal_order_from_register" nillable="true" type="xs:string"/>
+      <xs:element name="Removal_order_date" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_taghayyurat_e_kasht">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_taghayyurat_e_kasht_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Crop_season" type="xs:integer"/>
+      <xs:element name="Crop_inspection_date" nillable="true" type="xs:date"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Khasra_with_area_under_change" type="xs:integer"/>
+      <xs:element name="Former_entry" nillable="true" type="xs:string"/>
+      <xs:element name="Present_entry" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_signature" nillable="true" type="xs:string"/>
+      <xs:element name="Patwari_signature_date" nillable="true" type="xs:date"/>
+      <xs:element name="Attested_by_revenue_officer" nillable="true" type="xs:string"/>
+      <xs:element name="Revenue_officer_attested_date" nillable="true" type="xs:date"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Processing_year" nillable="true" type="xs:string"/>
+      <xs:element name="Book_no" type="xs:int"/>
+      <xs:element name="Leaf_no" type="xs:int"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Attested_by_qanungo" nillable="true" type="xs:string"/>
+      <xs:element name="Qanungo_attested_date" nillable="true" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_tatimma_shajrah">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:integer"/>
+      <xs:element name="Khasra_no_former" type="xs:string"/>
+      <xs:element name="Khasra_no_present" type="xs:string"/>
+      <xs:element name="Khatuni_no" type="xs:string"/>
+      <xs:element name="Khasra_no_east" type="xs:string"/>
+      <xs:element name="Khasra_no_west" type="xs:string"/>
+      <xs:element name="Khasra_no_south" type="xs:string"/>
+      <xs:element name="Khasra_no-north" type="xs:string"/>
+      <xs:element name="Calculation_of_area" nillable="true" type="xs:string"/>
+      <xs:element name="Area_and_soil_classification" nillable="true" type="xs:string"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+      <xs:element name="Verified_by_patwari" nillable="true" type="xs:string"/>
+      <xs:element name="Verified_by_kanungo" nillable="true" type="xs:string"/>
+      <xs:element name="Verified_by_revenue" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+      <xs:element name="Processing_date" nillable="true" type="xs:date"/>
+      <xs:element name="Field_book_no" nillable="true" type="xs:string"/>
+      <xs:element name="Leaf_no" nillable="true" type="xs:string"/>
+      <xs:element name="Khasra_no" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_tax">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_tax_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Parcel_id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Territory_id" type="xs:integer"/>
+      <xs:element name="Area_value" nillable="true" type="xs:decimal"/>
+      <xs:element name="Tax_rate" nillable="true" type="xs:decimal"/>
+      <xs:element name="Tax_amount" nillable="true" type="xs:decimal"/>
+      <xs:element name="Tax_period_from" nillable="true" type="xs:date"/>
+      <xs:element name="Tax_period_to" nillable="true" type="xs:date"/>
+      <xs:element name="Remarks" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_tehsil">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_tehsil_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Tehsil_name" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="District_id" type="xs:integer"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+      <xs:element name="Geom" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_territory">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_territory_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Territory_name" nillable="true" type="xs:string"/>
+      <xs:element name="Id_code" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_unit_conversion">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_unit_conversion_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="From_unit" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="To_unit" type="xs:integer"/>
+      <xs:element name="Conversion_value" nillable="true" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_wajib_ul_arz">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_wajib_ul_arz_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Custom_name" nillable="true" type="xs:string"/>
+      <xs:element name="Custom_date" nillable="true" type="xs:date"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Custom_type" type="xs:integer"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Mauza_id" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Tbl_wajib_ul_arz_type">
+    <xs:sequence>
+      <xs:element default="nextvaltbl_wajib_ul_arz_type_id_seqregclass" name="Id" type="xs:integer"/>
+      <xs:element name="Custom_type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
